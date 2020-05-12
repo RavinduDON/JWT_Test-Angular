@@ -11,7 +11,7 @@ import { BoardAdminComponent } from './board-admin/board-admin.component';
 import { BoardUserComponent } from './board-user/board-user.component';
 import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
-import {AuthInterseptorService} from "./helpers/auth-interseptor.service";
+import {authInterseptorProviders, AuthInterseptorService} from "./helpers/auth-interseptor.service";
 
 @NgModule({
   declarations: [
@@ -29,7 +29,7 @@ import {AuthInterseptorService} from "./helpers/auth-interseptor.service";
     FormsModule,
     HttpClientModule
   ],
-  providers: [AuthInterseptorService],
+  providers: [authInterseptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
